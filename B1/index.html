@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Test B1</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="intro">
+      <h1>Professor Gabriela Neculai</h1>
+      <h2>English Test – B1 Level</h2>
+
+      <div class="instructions">
+        <h3>Instructions:</h3>
+        <ul>
+          <li>
+            You must select <strong>only one option</strong> for each question.
+          </li>
+          <li>You have <strong>30 seconds</strong> per question.</li>
+          <li>
+            If time runs out, the test will automatically move to the next
+            question.
+          </li>
+          <li>You <strong>cannot go back</strong> to previous questions.</li>
+          <li>
+            Unanswered questions will be considered <strong>incorrect</strong>.
+          </li>
+        </ul>
+      </div>
+
+      <p>
+        <label>Full name: <input type="text" id="studentName" /></label>
+      </p>
+      <p>
+        <label>Class: <input type="text" id="studentClass" /></label>
+      </p>
+      <p>
+        <label
+          ><input type="checkbox" id="confirmInstructions" /> I have read and
+          understood the instructions.</label
+        >
+      </p>
+      <button id="startBtn">Start Test</button>
+    </div>
+
+    <div id="quiz" hidden>
+      <div class="status-bar">
+        <span id="progressText"></span>
+        <span id="timerText"></span>
+      </div>
+      <div class="timer-bar">
+        <div id="timerFill"></div>
+      </div>
+      <div id="questionContainer"></div>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <div id="result" hidden>
+      <h2>Test Finished!</h2>
+      <p id="scoreText"></p>
+      <p id="dateText"></p>
+      <button id="pdfBtn">Download PDF Report</button>
+    </div>
+
+    <script type="module" src="index.mjs"></script>
+  </body>
+</html>
