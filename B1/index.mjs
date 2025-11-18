@@ -268,7 +268,7 @@ function addWatermark(doc) {
 
   for (let i = 0; i < 7; i++) {
     const y = topY + i * step;
-    doc.text("Professor Gabriela Neculai", pageWidth / 2, y, {
+    doc.text("Teacher Gabriela Neculai", pageWidth / 2, y, {
       angle: -45,
       align: "center",
       maxWidth: Infinity,
